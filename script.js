@@ -8,7 +8,7 @@ const { createApp } = Vue;
     },
     mounted(){
         axios
-            .get('http://localhost/REPO_PHP/php-todo-list-json/index.php')
+            .get('http://localhost/REPO_PHP/php-todo-list-json/API.php')
             .then(response => {
                 console.log(response);
             })

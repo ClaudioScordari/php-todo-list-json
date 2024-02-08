@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "task": "Fare la spesa",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "task": "Studiare per l'esame",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "task": "Andare in palestra",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "task": "Leggere un libro",
+      "completed": false
+    },
+    {
+        "id": 5,
+        "task": "Mangiare un frutto",
+        "completed": true
+    },
+    {
+        "id": 6,
+        "task": "Chiamare zia",
+        "completed": false
+    },
+    {
+        "id": 7,
+        "task": "Portare fuori il cane",
+        "completed": false
+    },
+    {
+        "id": 8,
+        "task": "Lavorare al progetto",
+        "completed": false
+    },
+    {
+        "id": 9,
+        "task": "Aiutare fratello",
+        "completed": true
+    },
+    {
+        "id": 10,
+        "task": "Giocare ala Playstation",
+        "completed": true
+    }
+  ]
+  

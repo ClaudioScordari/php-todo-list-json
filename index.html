@@ -16,8 +16,14 @@
         <div id="app">
 
             <h1>
-                Ciao
+                PHP ToDo List JSON
             </h1>
+
+            <ul>
+                <li v-for="(elem, i) in todoList" :class="elem.completed == true ? 'completed' : ''">
+                    {{ elem.task }}
+                </li>
+            </ul>
 
         </div>
         

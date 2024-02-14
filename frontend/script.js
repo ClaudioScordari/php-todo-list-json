@@ -37,6 +37,22 @@ createApp({
 
                     this.newTodo = '';
                 })
+        },
+        changeStatus(i){
+            axios
+                .post('http://localhost/REPO_PHP/php-todo-list-json/backend/switch-status.php',
+                    {
+                        'index': i
+                    },
+                    {
+                        headers: {
+                            'Content-Type' : 'multipart/form-data'
+                        }
+                    }
+                )
+                .then(res => {
+                    console.log(res);
+                })
         }
     },
     mounted(){

@@ -10,6 +10,10 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css">
+
+        
+        <!-- VUE JS -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
 
     <body>
@@ -26,8 +30,10 @@
 
             <div>
                 <ul>
-                    <li v-for="(oneTodo, index) in todoList" :class="oneTodo.completed == true ? 'completed' : ''">
-                        {{ oneTodo.task }}
+                    <li v-for="(oneTodo, index) in todoList">
+                        <span class="clickable" @click="changeStatus(index)" :class="oneTodo.completed == true ? 'completed':''">
+                            {{ oneTodo.task }}
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -36,9 +42,6 @@
         
         <!-- CDN JS -->
         <div>
-            <!-- VUE JS -->
-            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
             <!-- AXIOS -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     

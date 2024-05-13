@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP ToDo List JSON</title>
+
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <div id="app" class="container">
+            <h1>To Do List</h1>
+
+            <div class="mb-2">
+                <label for="task">Inserisci un task:</label>
+                <input v-model="task" class="d-block" type="text" name="task" id="task">
+            </div>
+
+            <div>
+                <button @click="addTodo">Invia</button>
+            </div>
+
+            <hr> 
+
+            <!-- array -->
+            <h2>Miei To Do</h2>
+
+            <div>
+                <ul>
+                    <li class="clickable" v-for="todo in todoList" @click="changeStatus(todo.id, todo.task, todo.completed)"  :class="todo.completed == true ? 'completed' : ''">
+                        {{ todo.task }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- CDN JS -->
+        <div>
+            <!-- VUE JS -->
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+            <!-- AXIOS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+            <!-- JS -->
+            <script src="./script.js"></script>
+        </div>
+    </body>
+</html>
